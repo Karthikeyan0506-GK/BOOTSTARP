@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Add Element To Start Of An Array</title>
+    <style>
+        body {
+            margin-top: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: goldenrod;
+        }
+
+        input {
+            margin-left: 10%;
+        }
+
+        button {
+            margin-left: 25%;
+        }
+
+        #output {
+            margin-top: 2%;
+            margin-left: 2%;
+            position: relative;
+        }
+
+        #existing {
+            margin-right: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>To Add Element To Start Of An Array</h1>
+    <br><br>
+    <form>
+        <label><b>Enter a value to add into array</b></label>
+        <br><br>
+        <input type="text" id="text" />
+        <br><br>
+        <button type="button" onclick="addArray()">Add Into Array</button>
+    </form>
+    <br>
+    <p id="existing"></p>
+    <script>
+        let arrayVal = ["1", "2", "3"];
+        document.getElementById("existing").innerText = arrayVal;
+        function addArray() {
+            arrayVal.unshift(document.getElementById("text").value);
+            document.getElementById("existing").innerText = arrayVal;
+            document.getElementById("text").value = "";
+        }
+    </script>
+</body>
+
+</html>
