@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>String Into UpperCase</title>
+   
+     <style>
+        body {
+            margin-top: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 600px;
+            background-color:rgb(32, 187, 218);
+        }
+
+        input {
+            margin-left: 0px;
+         
+        }
+
+        p {
+            margin-right: 0px;
+        }
+
+        #output {
+            margin-top: 10px;
+            margin-right: 0%;
+            position: relative;
+        }
+
+        button{
+            color:gray;
+            background-color: gainsboro;
+            font-size:smaller;
+        }
+    </style> 
+</head>
+
+<body>
+    <h1>Converting the First Letter into a Upper Case </h1>
+    <form>
+        <p>
+            <label style="font-size:x-large;">Enter Any Text :</label>
+            <br><br>
+            <input type="text" id="text" />
+        </p>
+    </form>
+    <button type="button" onclick="convert()">Display</button>
+    <div id="output"></div>
+    <script>
+        function convert() {
+            let text = document.getElementById("text").value;
+            document.getElementById("output").innerHTML = text.charAt(0).toUpperCase() + text.slice(1);
+        }
+    </script>
+</body>
+
+</html>

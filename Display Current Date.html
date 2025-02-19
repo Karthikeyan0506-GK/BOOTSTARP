@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Current Date</title>
+</head>
+<style>
+    body {
+            margin-top: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 500px;
+            background-color:purple;
+        }
+</style>
+
+
+
+<body>
+    <h1 > Display Current Date</h1>
+    <button onclick="showCuurentDate()">Show</button>
+    <h1>Current Date</h1>
+    <div id="date"></div>
+
+    <script>
+       function showCuurentDate(){
+            const currentDate = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = currentDate.toLocaleDateString(undefined, options);
+        document.getElementById('date').innerText = formattedDate;
+        
+       }
+        
+    </script>
+</body>
+</html>
